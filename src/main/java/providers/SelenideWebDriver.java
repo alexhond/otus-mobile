@@ -9,12 +9,8 @@ import org.openqa.selenium.WebDriver;
 
 import javax.annotation.Nonnull;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class SelenideWebDriver implements WebDriverProvider {
 
@@ -27,8 +23,8 @@ public class SelenideWebDriver implements WebDriverProvider {
     options.merge(capabilities);
     options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
     options.setPlatformName("Android");
-    options.setDeviceName("otus");
-    options.setPlatformVersion("5.1");
+    options.setDeviceName("otus_3");
+    options.setPlatformVersion("12.0");
     options.setApp(app.getAbsolutePath());
 
     try {
@@ -39,15 +35,6 @@ public class SelenideWebDriver implements WebDriverProvider {
   }
 
   private File downloadApk() {
-    File apk = new File("build/ApiDemos-debug.apk");
-    if (!apk.exists()) {
-      String url = "https://github.com/appium/sample-code/blob/master/sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk?raw=true";
-      try (InputStream in = new URL(url).openStream()) {
-        copyInputStreamToFile(in, apk);
-      } catch (IOException e) {
-        throw new AssertionError("Failed to download apk", e);
-      }
-    }
-    return apk;
+    return new File("build/app-java-pro-v2.apk");
   }
 }

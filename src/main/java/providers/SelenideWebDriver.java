@@ -23,8 +23,8 @@ public class SelenideWebDriver implements WebDriverProvider {
     options.merge(capabilities);
     options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
     options.setPlatformName("Android");
-    options.setDeviceName("otus_3");
-    options.setPlatformVersion("12.0");
+    options.setDeviceName("otus_2");
+    options.setPlatformVersion("10.0");
     options.setApp(app.getAbsolutePath());
 
     try {

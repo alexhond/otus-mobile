@@ -5,6 +5,7 @@ import enums.Users;
 import extensions.AppiumExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import providers.SelenideWebDriver;
 
 import java.util.Random;
 
@@ -40,13 +41,10 @@ public class UsersTest {
 
   @Test
   public void checkRandomUser() {
-    Random random = new Random();
-    int i = random.nextInt(7);
-    Users[] values = Users.values();
     UsersPage usersPage = new UsersPage();
     usersPage.open()
         .checkUserPage()
         .clickUserPage()
-        .checkUserOnUserPage(values[i]);
+        .checkUsersOnUserPage();
   }
 }

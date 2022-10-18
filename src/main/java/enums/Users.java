@@ -6,8 +6,8 @@ public enum Users {
   SAMANTHA("ramiro.info", "Samantha"),
   KARIANNE("kale.biz", "Karianne"),
   KAMREN("demarco.info", "Kamren"),
-  LEOPOLDO("ola.org", "Leopoldo_Corkery"),
-  ELWYN_SKILES("elvis.io", "Elwyn.Skiles");
+  LEOPOLDO("ola.org", "Leopoldo"),
+  ELWYN_SKILES("elvis.io", "Elwyn");
 
   final String requestId;
   final String responseId;

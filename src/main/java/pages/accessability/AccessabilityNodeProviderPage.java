@@ -15,7 +15,7 @@ public class AccessabilityNodeProviderPage extends BasePage<AccessabilityNodePro
   }
 
   public AccessabilityNodeProviderPage checkColorView() {
-    $("[class='android.view.View']").shouldBe(Condition.visible);
+    $("[@class='android.view.View']").shouldBe(Condition.visible);
 
     return this;
   }

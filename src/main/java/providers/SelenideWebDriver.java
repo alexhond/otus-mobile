@@ -9,8 +9,12 @@ import org.openqa.selenium.WebDriver;
 
 import javax.annotation.Nonnull;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class SelenideWebDriver implements WebDriverProvider {
 
@@ -35,6 +39,15 @@ public class SelenideWebDriver implements WebDriverProvider {
   }
 
   private File downloadApk() {
-    return new File("build/app-java-pro-v2.apk");
+    File apk = new File("build/app-java-pro-v2.apk");
+    if (!apk.exists()) {
+      String url = "https://github.com/alexhond/otus-mobile/raw/master/build/app-java-pro-v2.apk";
+      try (InputStream in = new URL(url).openStream()) {
+        copyInputStreamToFile(in, apk);
+      } catch (IOException e) {
+        throw new AssertionError("Failed to download apk", e);
+      }
+    }
+    return apk;
   }
 }

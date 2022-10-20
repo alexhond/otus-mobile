@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="otus-mobile [clean,test,-DforkCount=0]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+  <configuration default="false" name="otus-mobile [clean,test...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
@@ -12,7 +12,7 @@
             <list>
               <option value="clean" />
               <option value="test" />
-              <option value="-DforkCount=0" />
+              <option value="-DincludeTags=posts" />
             </list>
           </option>
           <option name="pomFileName" />

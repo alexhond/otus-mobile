@@ -2,10 +2,13 @@ package demo;
 
 import apppages.PostsPage;
 import extensions.AppiumExtension;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(AppiumExtension.class)
+@Tag("mobile")
+@Tag("posts")
 public class PostsTest {
 
   @Test

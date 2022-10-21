@@ -39,7 +39,7 @@ public class SelenideWebDriver implements WebDriverProvider {
   }
 
   private File downloadApk() {
-    File apk = new File("build/app-java-pro-v2.apk");
+    File apk = new File("");
     if (!apk.exists()) {
       String url = "https://github.com/alexhond/otus-mobile/raw/master/build/app-java-pro-v2.apk";
       try (InputStream in = new URL(url).openStream()) {

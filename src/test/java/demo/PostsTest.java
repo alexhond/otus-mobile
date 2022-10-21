@@ -12,6 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 public class PostsTest {
 
   @Test
+  @Tag("check")
   public void checkPostsById() {
     PostsPage postPage = new PostsPage();
     postPage.open()

@@ -22,9 +22,13 @@ public class SelenideWebDriver implements WebDriverProvider {
     options.merge(capabilities);
     options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
     options.setPlatformName("Android");
-    options.setDeviceName("samsung_galaxy_s10_10.0");
-    options.setPlatformVersion("10.0");
+    options.setDeviceName("Galaxy A50");
+    options.setPlatformVersion("11.0");
+    options.setAdbPort(5037);
+    options.setRemoteAdbHost("host.docker.internal");
     options.setApp("/opt/app-java-pro-v2.apk");
+//    options.setApp("build/app-java-pro-v2.apk");
+//    options.setApp(app.getAbsolutePath());
 
     try {
       return new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), options);

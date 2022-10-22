@@ -98,6 +98,7 @@
                     <useUnlimitedThreads>${useUnlimitedThreads}</useUnlimitedThreads>
                     <threadCountMethods>${thread.count}</threadCountMethods>
                     <groups>${includeTags}</groups>
+                    <testFailureIgnore>true</testFailureIgnore>
 
                     <properties>
                         <property>
